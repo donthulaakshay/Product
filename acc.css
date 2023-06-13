@@ -1,0 +1,80 @@
+*{
+    outline: 0px;
+    margin: 0px;
+    padding: 0px;
+    background: lightslategrey;
+}
+input[type=text],input[type=email],input[type=password]
+{
+    width: 100%;
+    padding: 15px 40px;
+    margin: 15px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    /* text-decoration: none;
+    color: white; */
+}
+.con{
+    width: 25%; 
+    padding: 30px 50px;
+    border: 1px solid lightslategrey;
+    margin-top: 12%;
+    margin-left: 35%;
+    background: url("https://img.freepik.com/free-vector/modern-gradient-abstract-yellow-background-design_343694-3044.jpg");
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 2px 2px rgb(211, 200, 200)
+}
+.name{
+    position: relative;
+    padding-left: 5px;
+    background: transparent;
+}
+.name i{
+    position: absolute;
+    left: 15px;
+    top: 25px;
+    font-size: 22px;
+    color: rgb(45,15,236);
+}
+.em{
+    position: relative;
+    padding-left: 5px;
+    background: transparent;
+}
+.em i{
+    position: absolute;
+    left: 15px;
+    top: 27px;
+    font-size: 22px;
+    color: rgb(45,15,236);
+}
+.pwd{
+    position: relative;
+    padding-left: 5px;
+    background: transparent;
+}
+.pwd i{
+    position: absolute;
+    left: 15px;
+    top: 37px;
+    font-size: 22px;
+    color: rgb(45,15,236);
+}
+::placeholder{
+    color: whitesmoke;
+}
+.btn{
+    background: transparent;
+    display: flex;
+}
+button{
+    background-color: rgb(72, 72, 180);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 40%;
+}

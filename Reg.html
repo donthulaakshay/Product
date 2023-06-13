@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            outline: 0px;
+            margin: 0px;
+            padding: 0px;
+            background: lightslategrey;
+        }
+        input[type="text"],input[type="email"],input[type="password"]
+        {
+            width: 100%;
+            padding: 15px 40px;
+            margin: 15px 0px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background: white;
+        }
+        .con{
+            width: 25%; 
+            padding: 30px 50px;
+            border: 1px solid lightslategrey;
+            margin-top: 12%;
+            margin-left: 35%;
+            background: url("https://img.freepik.com/free-vector/modern-gradient-abstract-yellow-background-design_343694-3044.jpg");
+            background-repeat: no-repeat;
+            box-shadow: 0px 0px 2px 2px rgb(211, 200, 200);
+        }
+        .name,.em,.pwd{
+            position: relative;
+            padding-left: 5px;
+            background: transparent;
+        }
+        .name i{
+            position: absolute;
+            left: 15px;
+            top: 25px;
+            font-size: 22px;
+            color: rgb(45,15,236);
+            background: transparent;
+        }
+        .em i{
+            position: absolute;
+            left: 15px;
+            top: 27px;
+            font-size: 22px;
+            color: rgb(45,15,236);
+            background: transparent;
+        }
+        .pwd i{
+            position: absolute;
+            left: 15px;
+            top: 37px;
+            font-size: 22px;
+            color: rgb(45,15,236);
+             background: transparent;
+        }
+        ::placeholder{
+            color: lightslategray;
+        }
+        .btn{
+            display: flex;
+            background: transparent;
+        }
+        button{
+            width: 40%;
+            color: white;
+            cursor: pointer;
+            padding: 14px 20px;
+            margin: 10px 25px;
+            border-radius: 10px;
+            background-color: rgb(72, 72, 180);
+        }
+        .submit a{
+            text-decoration: none;
+            color: white;
+            background-color: transparent;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="name">
+            <input type="text" placeholder="Enter your Name"><i class="fa-solid fa-user"></i>
+        </div>
+        <div class="em">
+            <input type="email" placeholder="Enter your email"><i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="pwd">
+            <input type="password" placeholder="Enter your Password"><i class="fa fa-key fa-lg"></i>
+        </div>
+        <div class="btn">
+            <button class="submit"><a href="index.html">Register</a></button>
+            <button class="submit"><a href="login.html">Login</a></button>
+        </div>
+    </div>
+</body>
+</html>

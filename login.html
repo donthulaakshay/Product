@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            outline: 0px;
+            margin: 0px;
+            padding: 0px;
+        }
+        input[type="email"],input[type="pwd"]
+        {
+            width: 100%;
+            padding: 15px 40px;
+            margin: 15px 0px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background-color: white;
+        }
+        .log{
+            width: 25%; 
+            padding: 30px 50px;
+            border: 1px solid lightslategrey;
+            margin-top: 12%;
+            margin-left: 35%;
+            background-repeat: no-repeat;
+            box-shadow: 0px 0px 2px 2px rgb(211, 200, 200);
+            background: url("https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8OHx8fGVufDB8fHx8&w=1000&q=80");
+        }
+        .em,.pwd{
+            position: relative;
+            padding-left: 5px;
+            background: transparent;
+        }
+        .em i{
+            position: absolute;
+            left: 15px;
+            top: 27px;
+            font-size: 22px;
+            color: rgb(45,15,236);
+            background: transparent;
+        }
+        .pwd i{
+            position: absolute;
+            left: 15px;
+            top: 37px;
+            font-size: 22px;
+            color: rgb(45,15,236);
+             background: transparent;
+        }
+        ::placeholder{
+            color: lightslategray;
+        }
+        .btn{
+            display: flex;
+            background: transparent;
+        }
+        button{
+            width: 40%;
+            color: white;
+            cursor: pointer;
+            padding: 14px 20px;
+            margin: 10px 25px;
+            border-radius: 10px;
+            background-color: rgb(72, 72, 180);
+        }
+        .submit a{
+            text-decoration: none;
+            color: white;
+        }
+        .ca{
+            color: black;
+            font-size: 25px;
+            padding: 20px 0px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="log">
+        <div class="em">
+            <input type="email" src="g1.jpg" placeholder="Enter your emial"><i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="pwd">
+            <input type="pwd" placeholder="password"><i class="fa fa-key fa-lg"></i>
+        </div>
+        <div  class="btn">
+            <button class="submit"><a href="index.html">Login</a></button>
+            <button class="submit"><a href="Reg.html">Register</a></button>
+        </div>
+        <div class="ca">Forgot Password ?</div>
+    </div>
+</body>
+</html>

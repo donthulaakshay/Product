@@ -1,0 +1,263 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" type="text/css" href="proj.css">
+        <script>
+            i=0
+            let a=["k1.jpg","k2.jpg","k3.png","k4.jpg","ksuit4.jpg"]
+             function fun()
+             {
+                let iref=document.getElementById("simg")
+                let dref=document.getElementsByClassName("fa-circle")
+                let cl=dref[i].classList
+                cl.remove("fa-solid")
+                cl.add("fa-regular")
+                i++
+                if (i>=a.length)
+                {
+                    i=0
+                }
+                iref.src=a[i]
+                let cl1=dref[i].classList
+                cl1.remove("fa-reguar")
+                cl1.add("fa-solid")
+                dref[i].classList=cl1
+             }
+             setInterval (fun,2000)
+
+             function fun1()
+             {
+                let iref=document.getElementById("simg")
+                let dref=document.getElementsByClassName("fa-circle")
+                let cl=dref[i].classList
+                cl.remove("fa-solid")
+                cl.add("fa-regular")
+                i--
+                if (i<0)
+                {
+                    i=a.length-1
+                }
+                iref.src=a[i]
+                let cl1=dref[i].classList
+                cl1.remove("fa-reguar")
+                cl1.add("fa-solid")
+                dref[i].classList=cl1
+             }
+
+             function fun2()
+             {
+                let iref=document.getElementById("simg")
+                let dref=document.getElementsByClassName("fa-circle")
+                let cl=dref[i].classList
+                cl.remove("fa-solid")
+                cl.add("fa-regular")
+                i++
+                if (i>=a.length)
+                {
+                    i=0
+                }
+                iref.src=a[i]
+                let cl1=dref[i].classList
+                cl1.remove("fa-reguar")
+                cl1.add("fa-solid")
+                dref[i].classList=cl1
+             }
+
+             function fun3(x)
+             {
+                let iref=document.getElementById("simg")
+                let dref=document.getElementsByClassName("fa-circle")
+                let cl=dref[i].classList
+                cl.remove("fa-solid")
+                cl.add("fa-regular")
+                i=x
+                iref.src=a[i]
+                let cl1=dref[i].classList
+                cl1.remove("fa-reguar")
+                cl1.add("fa-solid")
+                dref[i].classList=cl1
+             }
+            
+             function sbfc1(){
+                let sbmn1=document.getElementsByClassName("sbmn1")[0].style.display="block"
+             }
+             function sblv1(){
+                let sbmn1=document.getElementsByClassName("sbmn1")[0].style.display="none"
+             }
+             function sbfc2(){
+                let sbmn2=document.getElementsByClassName("sbmn2")[0].style.display="block"
+             }
+             function sblv2(){
+                let sbmn2=document.getElementsByClassName("sbmn2")[0].style.display="none"
+             }
+             function sbfc3(){
+                let sbmn3=document.getElementsByClassName("sbmn3")[0].style.display="block"
+             }
+             function sblv3(){
+                let sbmn3=document.getElementsByClassName("sbmn3")[0].style.display="none"
+             }
+             function sbfc4(){
+                let sbmn4=document.getElementsByClassName("sbmn4")[0].style.display="block"
+             }
+             function sblv4(){
+                let sbmn4=document.getElementsByClassName("sbmn4")[0].style.display="none"
+             }
+             function user(){
+                let lgn=document.getElementsByClassName("lgn")[0]
+                if(lgn.style.display=="block"){
+                    lgn.style.display='none'
+                }
+                else{lgn.style.display='block'}
+             }
+             function srch(){
+                let sr=document.getElementsByClassName("sr")[0]
+                if (sr.style.display=="block"){
+                    sr.style.display='none'
+                }
+                else{sr.style.display='block'}
+             }
+        </script>
+    </head>
+    <body>
+        <div class="con">
+            <div class="top">
+                <div class="left">
+                    <h1>KILLER</h1>
+                    <img src="killer.png" alt="killer"/>
+                </div>
+                <div class="mid">
+                    <div class="mn1" onmouseover="sbfc1()" onmouseleave="sblv1()">
+                        <a href="https://www.killerjeans.com/killer-new-arrivals">NEW ARRIVALS</a>
+                        <div class="sbmn1">
+                            <div class="jns"><a href="jeans.html">Jeans</a></div>
+                            <div>Trousers</div>
+                            <div>Pants</div>
+                            <div>Shirts</div>
+                            <div>T-Shirts</div>
+                            <div>Track Pants</div>
+                            <div>Sweat Shirt</div>
+                            <div>Winter Wear</div>
+                            <div>Deodorent</div>
+                        </div>
+                    </div>
+                    <div class="mn2" onmouseover="sbfc2()" onmouseleave="sblv2()">TOP WEAR
+                        <div class="sbmn2">
+                            <div>Shirts</div>
+                            <div>T-Shirts</div>
+                            <div>Sweat Shirts</div>
+                            <div>Jersey</div>
+                            
+                        </div>
+                    </div>
+                    <div class="mn3" onmouseover="sbfc3()" onmouseleave="sblv3()">BOTTOM WEAR
+                        <div class="sbmn3">
+                            <div>Jeans</div>
+                            <div>Trousers</div>
+                            <div>Pants</div>
+                        </div>
+                    </div>
+                    <div class="mn4" onmouseover="sbfc4()" onmouseleave="sblv4()">WINTER WEAR
+                        <div class="sbmn4">
+                            <div>Jacket</div>
+                            <div>Sweat Shirts</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="i1" onclick="user()"><i class="fa-solid fa-user">
+                        <div class="lgn">
+                            <div><a href="Reg.html">Register</a></div>
+                            <div><a href="login.html">Login</a></div>
+                        </div>
+                    </i></div>
+                    <div class="i2" onclick="srch()" ><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div class="i3" onclick="heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class="i4" onclick="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+                </div>
+            </div>
+            <div class="scrl"><img src="k1.jpg" id="simg" ></div>
+            <div class="drt">
+                <div class="lfsd" onclick="fun1()"><i class="fa-solid fa-less-than"></i></div>
+                <div class="rtsd" onclick="fun2()"><i class="fa-solid fa-greater-than"></i></div>
+            </div>
+            <div class="arr">
+                <div onclick="fun3(0)"><i class="fa-solid fa-circle"></i></div>
+                <div onclick="fun3(1)"><i class="fa-regular fa-circle"></i></div>
+                <div onclick="fun3(2)"><i class="fa-regular fa-circle"></i></div>
+                <div onclick="fun3(3)"><i class="fa-regular fa-circle"></i></div>
+                <div onclick="fun3(4)"><i class="fa-regular fa-circle"></i></div>
+            </div>
+            <div class="mini">
+                <h2>Categories</h2>
+                <div class="cat">
+                    <div class="c1">
+                        <img src="k13.jpg">
+                        <a href="jeans.html">
+                            <p>Jeans</p>
+                        </a>
+                    </div>
+                    <div class="c1">
+                        <img src="k15.jpg">
+                        <p>Shirts</p>
+                    </div>
+                    <div class="c1">
+                        <img src="ktsr1.jpg">
+                        <p>T-Shirts</p>
+                    </div>
+                    <div class="c1">
+                        <img src="ktrs3.jpg">
+                        <p>Trouser</p>
+                    </div>
+                </div>
+                <div class="pro">
+                    <div class="k1"><img src="k11.jpg"></div>
+                    <div class="k2"><img src="https://cdn.anscommerce.com/live/image/catalog/brandstore/killer/banner/Banner_New.png"></div>
+                    <div class="k3"><img src=" https://cdn.anscommerce.com/live/image/catalog/brandstore/killer/banner/Banner-1_New.png"></div>
+                    <div class="k4"><img src="Banner-3.jpg"></div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="hd">
+                    <h1>Sign up now & get 10% off</h1>
+                    <p>Be the first to know about our new arrivals and exclusive offers</p>
+                    <div><input type="email" class="email" value="Email"/></div>
+                    <button class=" button scrb">Subscribe</button>
+                </div>
+                <hr/>
+                <div class="flex">
+                    <div class="fl1">
+                        <div><b>Information</b></div>
+                        <div>Home</div>
+                        <div>About</div>
+                        <div>Products</div>
+                        <div>Contact</div>
+                        <div>Track Order</div>
+                    </div>
+                    <div class="fl1">
+                        <div><b>Extras</b></div>
+                        <div>Delivery Information</div>
+                        <div>Privacy Policy</div>
+                        <div>Terms & Conditons</div>
+                        <div>Returns</div>
+                    </div>
+                    <div class="fl1">
+                        <div><b>Shopping</b></div>
+                        <div>New Arrivals</div>
+                        <div>Bottom Wear</div>
+                        <div>Top Wear</div>
+                        <div>Denim</div>
+                    </div>
+                    <div class="fl1">
+                        <div><b>Socials</b></div>
+                        <a href="https://www.facebook.com/KillerJeans/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/killerjeansofficial/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/killer_jeans?lang=en"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/channel/UChx4JZSIuV3pHjbKMJ2a3zg"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <hr/>
+                <footer class="ftr">All Rights Powered By <strong>ANS Commerce</strong></footer>
+            </div> 
+        </div>
+    </body>
+</html>

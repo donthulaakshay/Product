@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Jeans</title>
+    
+    <style>
+        *{
+            outline: 0px;
+            margin: 0px;
+            padding: 0px;
+        }
+        .con{
+            width: 100%;
+            background-color: black;
+            color: white;
+        }
+        .top{
+            width: 100%;
+            height: 10vh;
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 70px;
+            box-sizing: border-box;
+            position: fixed;
+        }
+        .left{
+            width: 100px;
+            color: rgb(225 , 85, 39);
+            height: 15px;
+            padding-top: 15px;
+            font-size: 20px;
+            display: flex;
+        }
+        .left>img{
+            width: 47px;
+            height: 47px;
+            top: 25px;
+        }
+        .mid{
+            color: white;
+            display: flex;
+            font-size: 14px;
+            padding-top: 40px;
+            padding-right: 15px;
+            gap: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .mn1{
+            position: relative;
+            
+        }.mn1 a{
+            text-decoration: none;
+            color:white;
+        }
+        .sbmn1{
+            position: absolute;
+            background-color: white;
+            color: black;
+            width: 100px;
+            height: 270px;
+            padding: 10px;
+            display: none;
+            
+        }
+        .sbmn1 div{
+            margin-bottom: 15px;
+        }
+        .mn2{
+            position: relative;
+        }
+        .sbmn2{
+            position: absolute;
+            background-color: white;
+            color: black;
+            width: 85px;
+            height: 110px;
+            padding: 10px;
+            display: none;
+        }
+        .sbmn2 div{
+            margin-bottom: 15px;
+        }
+        .mn3{
+            position: relative;
+        }
+        .sbmn3{
+            position: absolute;
+            background-color: white;
+            color: black;
+            width: 85px;
+            height: 80px;
+            padding: 10px;
+            display: none;
+        }
+        .sbmn3 div{
+            margin-bottom: 15px;
+        }
+        .mn4{
+            position: relative;
+        }
+        .sbmn4{
+            position: absolute;
+            background-color: white;
+            color: black;
+            width: 85px;
+            height: 50px;
+            padding: 10px;
+            display: none;
+        }
+        .sbmn4 div{
+            margin-bottom: 15px;
+        }
+        .m1{
+            color: coral;
+        }
+        .fa-angle-down{
+            padding-left: 10px;
+        }
+        .right{
+            width: 200px;
+            display: flex;
+            font-size: 25px;
+            color: white;
+            padding-top: 30px;
+            
+        }
+        .right div{
+            width: 60px;
+        }
+
+        .i1:hover {
+            font-size: 30px;
+        }
+        .fa-heart:hover{
+            color: red;
+        }
+        .blk{
+            width: 100%;
+            font-size: 13px;
+            color: lightslategray;
+            padding: 12vh 0px 20px 25px;
+            box-sizing: border-box;
+            position: static;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .s1 a{
+            color: lightslategray;
+            text-decoration: none;
+        }
+        .s2{
+            height: auto;
+            display: flex;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .flt{
+            width: 30%;
+            height: 135%;
+            padding-top: 50px;
+            padding-left: 30px;
+            padding-bottom: 25px;
+            background-color: rgb(232,230,230);
+        }
+        .flt div{
+            display: block;
+            font-size: 15px;
+            padding-bottom: 15px;
+        }
+        .flt .p1{
+            font-size: 25px;
+        }
+        .sz{
+            display: flex;
+            padding-right: 50px;
+        }
+        .sz p{
+            display: inline;
+            padding-right: 15px;
+        }
+        .tr{
+            width: 100%;
+            justify-content: space-around;
+        }
+        .trnd{
+            width: 94%;
+            display: flex;
+            padding: 15px 30px;
+            overflow: hidden;
+            border-bottom: 1px solid  black;
+        }
+        .trnd .t1{
+            font-size: 20px;
+        }
+        .trnd .t2{
+            right: 10px;
+            padding-top: 4px;
+            padding-left: 55%;
+            font-size: 15px;
+        }
+        .gd{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            gap: 5%;
+            width: 95%; 
+            padding: 5px 0px;
+            margin: 2%;
+            
+        }
+        .gd div{
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 0px 5px 5px rgb(242, 243, 243);
+        }
+        .im1{
+            /* border: 1px solid black; */
+            border-radius: 5px;
+        }
+        .im1 h4,.im2 h4,.im3 h4,.im4 h4,.im5 h4,.im6 h4,.im7 h4,.im8 h4,.im9 h4,.im10 h4,.im11 h4,.im12 h4{
+            width: 95%;
+            cursor: pointer;
+            color: gray;
+            text-align: center;
+            padding-left: 10px;
+            padding-top: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            /* border: 1px solid black; */
+            
+        }
+        h4 a{
+            text-decoration: none;
+            color: black;
+            font-weight: normal;
+            background-color: transparent;
+            padding-top: 10px;
+        }
+        .im2{
+            /* border: 1px solid black; */
+            border-radius: 5px;
+        }
+        .im3{
+            /* border: 1px solid black; */
+            border-radius: 5px;
+        }
+        .im4{
+            /* border: 1px solid black; */
+            border-radius: 5px;
+        }
+        .im5{
+            /* border: 1px solid black; */
+            border-radius: 5px;
+        }
+        .im6{
+            /* border: 1px solid black; */
+            border-radius: 5px;
+        }
+        .im7{
+            /* border: 1px solid black; */
+            border-radius: 5px;
+        }
+        .im8{
+            /* border: 1px solid black; */
+            border-radius: 5px;
+        }
+        .im9{
+            /* border: 1px solid black; */
+            border-radius: 5px;
+        }
+        .im10{
+            /* border: 1px solid black; */
+            border-radius: 5px;
+        }
+        .im11{
+            /* border: 1px solid black; */
+            border-radius: 5px;
+        }
+        .im12{
+            /* border: 1px solid black; */
+            border-radius: 10px;
+        }
+        .mt{
+            height: 24vh;
+            background-color: red ;
+        }
+        .bottom{
+            align-items: center;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(60, 57, 57);
+            z-index: 4;
+            position: static;
+            /* margin-top: 350px; */
+        }
+        .hd>h1{
+            width: 100%;
+            height: 20px;
+            font-size: 40px;
+            padding: 40px 0px;
+        }
+        .hd{
+            text-align: center;
+        }
+        .hd>p{
+            color: lightgray;
+            font-size: 20px;
+        }
+        .email{
+            width: 500px;
+            height: 40px;
+            background-color: lightslategray;
+            color: whitesmoke;
+            border: 1px solid whitesmoke;
+            text-align: center;
+            margin: 15px 0px;
+        }
+        .scrb{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serifs;
+            border: 1px solid grey;
+            position: relative;
+            background: coral;
+            font-size: 20px;
+            padding: 0px 20px;
+            margin: 10px;
+            width: 200px;
+            height: 45px;
+            cursor: pointer;
+            transition: 0.8s;
+            overflow: hidden;
+            color: white;
+            border-radius: 25px;
+        }
+        .scrb:hover{
+            color: white;
+            background-color: blue;
+        }
+        .flex{
+            height: 30vh;
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 200px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .fl1 div{
+            padding: 10px;
+        }
+        .fa-brands{
+            color: whitesmoke;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-size: 25px;
+            padding-right: 10px;
+        }
+        .ftr{
+            text-align: center;
+            word-spacing: 5px;
+            padding: 10px;
+        }
+    </style>
+    <script>
+         function sbfc1(){
+                let sbmn1=document.getElementsByClassName("sbmn1")[0].style.display="block"
+             }
+             function sblv1(){
+                let sbmn1=document.getElementsByClassName("sbmn1")[0].style.display="none"
+             }
+             function sbfc2(){
+                let sbmn1=document.getElementsByClassName("sbmn2")[0].style.display="block"
+             }
+             function sblv2(){
+                let sbmn1=document.getElementsByClassName("sbmn2")[0].style.display="none"
+             }
+             function sbfc3(){
+                let sbmn1=document.getElementsByClassName("sbmn3")[0].style.display="block"
+             }
+             function sblv3(){
+                let sbmn1=document.getElementsByClassName("sbmn3")[0].style.display="none"
+             }
+             function sbfc4(){
+                let sbmn1=document.getElementsByClassName("sbmn4")[0].style.display="block"
+             }
+             function sblv4(){
+                let sbmn1=document.getElementsByClassName("sbmn4")[0].style.display="none"
+             }
+    </script>
+</head>
+<body>
+    <div class="top">
+        <div class="left">
+            <h1>KILLER</h1>
+            <img src="killer.png" alt="killer"/>
+        </div>
+        <div class="mid">
+            <div class="mn1" onmouseover="sbfc1()" onmouseleave="sblv1()">
+                <a href="https://www.killerjeans.com/killer-new-arrivals" >NEW ARRIVALS</a>
+                <div class="sbmn1">
+                    <div>Jeans</div>
+                    <div>Trousers</div>
+                    <div>Pants</div>
+                    <div>Shirts</div>
+                    <div>T-Shirts</div>
+                    <div>Track Pants</div>
+                    <div>Sweat Shirt</div>
+                    <div>Winter Wear</div>
+                    <div>Deodorent</div>
+                </div>
+            </div>
+            <div class="mn2" onmouseover="sbfc2()" onmouseleave="sblv2()">TOP WEAR
+                <div class="sbmn2">
+                    <div>Shirts</div>
+                    <div>T-Shirts</div>
+                    <div>Sweat Shirts</div>
+                    <div>Jersey</div>
+                    
+                </div>
+            </div>
+            <div class="mn3" onmouseover="sbfc3()" onmouseleave="sblv3()">BOTTOM WEAR
+                <div class="sbmn3">
+                    <div>Jeans</div>
+                    <div>Trousers</div>
+                    <div>Pants</div>
+                </div>
+            </div>
+            <div class="mn4" onmouseover="sbfc4()" onmouseleave="sblv4()">WINTER WEAR
+                <div class="sbmn4">
+                    <div>Jacket</div>
+                    <div>Sweat Shirts</div>
+                </div>
+            </div>
+            <div class="m1">SALE</div>
+        </div>
+        <div class="right">
+            <div class="i1"><i class="fa-solid fa-user"></i></div>
+            <div class="i1"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="i1"><i class="fa-regular fa-heart"></i></div>
+            <div class="i1"><i class="fa-solid fa-cart-shopping"></i></div>
+        </div>
+    </div>
+    <div class="blk">
+        <ul class="s1">
+            <a href="index.html"><i class="fa fa-home"></i></a>
+            <i class="a-solid fa-greater-than"></i>
+            <a href="https://www.killerjeans.com/killer-new-arrivals" >New Arrivals</a>
+            <i class="a-solid fa-greater-than"></i>
+            <a href="jeans.html">Jeans</a>
+        </ul>
+    </div>
+    <div class="s2">
+        <aside class="flt">
+            <div class="p1">Filter</div>
+            <div>
+                <div class="p1">Categories</div>
+                <input type="checkbox">&nbsp Jeans
+            </div>
+            <div>
+                <div class="p1">Fit</div>
+                <div><input type="checkbox">&nbsp; Ankle</div>
+                <div><input type="checkbox">&nbsp; Straight</div>
+                <div><input type="checkbox">&nbsp; Skinny</div>
+                <div><input type="checkbox">&nbsp; Slim</div>
+            </div>
+            <div>
+                <div class="p1">Gender</div>
+                <div><input type="checkbox">&nbsp; Men</div>
+                <div><input type="checkbox">&nbsp; Women</div>
+                <div><input type="checkbox">&nbsp; Children</div>
+            </div>
+            <div>
+                <div class="p1">Pattern</div>
+                <input type="checkbox">&nbsp; Solid
+            </div>
+            <div class="sz">
+                <div class="p1">Size</div>
+                <p><input type="checkbox">&nbsp;30</p>
+                <p><input type="checkbox">&nbsp;32</p>
+                <p><input type="checkbox">&nbsp;34</p>
+                <p><input type="checkbox">&nbsp;36</p>
+                <p><input type="checkbox">&nbsp;38</p>
+            </div>
+            <div>
+                <div class="p1">Closure</div>
+                <div><input type="checkbox">&nbsp Zip</div>
+                <div><input type="checkbox">&nbsp Button</div>
+                <div><input type="checkbox">&nbsp Snap Button</div>
+            </div>
+            <div>
+                <div class="p1">Fabric</div>
+                <div><input type="checkbox">&nbsp Cotton Blend</div>
+                <div><input type="checkbox">&nbsp Lycra</div>
+                <div><input type="checkbox">&nbsp Denim</div>
+            </div>
+            <div>
+                <div class="p1">Price</div>
+                <input type="checkbox">&nbsp <i class="fa-solid fa-indian-rupee-sign"></i>&nbsp 2001-4000
+            </div>
+        </aside>
+        <div class="tr">
+            <div class="trnd">
+                <div class="t1">TRENDING JEANS FOR MEN</div>
+                <div class="t2">SORT BY
+                    <select>
+                        <option value="1">Bestseller</option>
+                        <option value="2">Popularity</option>
+                        <option value="3">Discount</option>
+                        <option value="4">Price: Low to High</option>
+                        <option value="5">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+            <div class="gd">
+                <div class="im1">
+                    <img src="https://cdn.staticans.com/image/tr:e-sharpen-01,h-1100,w-1300,cm-pad_resize/data/Killer/17-jan-2023/9785-SLM-SLMFT-DKINDG_1.jpg" alt="naimg" style="width: 100%; height: 85%;">
+                        <h4>
+                            <a href="https://www.killerjeans.com/killer-new-arrivals-jeans/killer-mens-slim-fit-solid-dark-indigo-jeans-9785-slm-slmft-dkindg">
+                                Killer Men's Slim Fit Solid Dark Indigo Jeans
+                            </a>
+                        </h4>
+                </div>
+                <div class="im2">
+                    <img src="https://cdn.staticans.com/image/tr:e-sharpen-01,h-1100,w-1300,cm-pad_resize/data/Killer/14-feb-2023/8739-SK-SKFT-DKINDG_1.jpg" alt="noimg" style="width: 100%; height: 85%;"/>
+                    <h4>
+                        <a href="https://www.killerjeans.com/killer-new-arrivals/killer-new-arrivals-jeans/killer-men-s-mid-indigo-solid-slim-fit-jeans-9741-slm-slmft-mding">
+                            Killer Men's Mid Indigo Solid Slim Fit Jeans
+                        </a>
+                    </h4>
+                </div>
+                <div class="im3">
+                    <img src="https://cdn.staticans.com/image/tr:e-sharpen-01,h-800,w-600,cm-pad_resize/data/Killer/17-jan-2023/8540-SK-SKFT-DKINDG_1.jpg" alt="noimg" style="width: 100%; height: 85%;">
+                    <h4>
+                        <a href="https://www.killerjeans.com/killer-new-arrivals/killer-new-arrivals-jeans/killer-mens-dark-indigo-straight-fit-jeans-2376-st-stft-dkindg">
+                            Killer Men's Dark Indigo Straight Fit Jeans
+                        </a>
+                    </h4>
+                </div>
+                <div class="im4">
+                    <img src="https://cdn.staticans.com/image/tr:e-sharpen-01,h-800,w-600,cm-pad_resize/data/Killer/24-08-2022/9521-SLM-SLMFT-LGHTBL_1.jpg" alt="noimg" style="width: 100%; height: 85%;">
+                    <h4>
+                        <a href="https://www.killerjeans.com/killer-new-arrivals/killer-new-arrivals-jeans/killer-mens-fashion-slim-fit-light-blue-knit-jeans-9521-slm-slmft-lghtbl">
+                            Killer Men's Fashion Slim Fit Light Blue Knit Jeans
+                        </a>
+                    </h4>
+                </div>
+                <div class="im5">
+                    <img src="https://cdn.staticans.com/image/tr:e-sharpen-01,h-800,w-800,cm-pad_resize/data/Killer/17-jan-2023/9846-SLM-SLMFT-BK_1.jpg" alt="noimg" style="width: 100%; height: 85%;">
+                    <h4>
+                        <a href="https://www.killerjeans.com/killer-new-arrivals/killer-new-arrivals-jeans/killer-mens-black-slim-fit-jeans-9846-slm-slmft-bk">
+                            Killer Men's Black Slim Fit Jeans
+                        </a>
+                    </h4>
+                </div>
+                <div class="im6">
+                    <img src="https://cdn.staticans.com/image/tr:e-sharpen-01,h-800,w-600,cm-pad_resize/data/Killer/17-jan-2023/AK-2117-ANKLFT-DKINDG_1.jpg" alt="noimg" style="width: 100%; height: 85%;">
+                    <h4>
+                        <a href="https://www.killerjeans.com/killer-new-arrivals/killer-new-arrivals-jeans/killer-mens-dark-indigo-ankle-fit-jeans-ak-2117-anklft-dkindg">
+                            Killer Men's Dark Indigo Ankle Fit Jeans
+                        </a>
+                    </h4>
+                </div>
+                <div class="im7">
+                    <img src="https://cdn.staticans.com/image/tr:e-sharpen-01,h-800,w-800,cm-pad_resize/data/Killer/29-mar-2023/8858-SK-SKFT-LGHIND_1.jpg" alt="noimg" style="width: 100%; height: 85%;">
+                    <h4>
+                        <a href="https://www.killerjeans.com/killer-new-arrivals/killer-new-arrivals-jeans/killer-light-indigo-skiny-fit-solid-jeans-for-mens-8858-sk-skft-lghind">
+                            Killer Light Indigo Skinny Fit Solid Jeans For Men's
+                        </a>
+                    </h4>
+                </div>
+                <div class="im8">
+                    <img src="https://cdn.staticans.com/image/tr:e-sharpen-01,h-800,w-800,cm-pad_resize/data/Killer/29-mar-2023/8796-SK-SKFT-JTBK_2.jpg" alt="noimg" style="width: 100%; height: 85%;">
+                    <h4>
+                        <a href="https://www.killerjeans.com/killer-new-arrivals/killer-new-arrivals-jeans/killer-jet-black-straight-solid-jeans-for-mens-2424-st-stft-jtbk">
+                            Killer Jet Black Skiiny Fit Solid Jeans For Men's
+                        </a>
+                    </h4>
+                </div>
+                <div class="im9">
+                    <img src="https://cdn.staticans.com/image/tr:e-sharpen-01,h-800,w-800,cm-pad_resize/data/Killer/14-feb-2023/AK-2169-ANKLFT-BK_1.jpg" alt="noimg" style="width: 100%; height: 85%;">
+                    <h4>
+                        <a href="https://www.killerjeans.com/killer-new-arrivals/killer-new-arrivals-jeans/killer-men-s-ankle-fit-black-jeans-ak-2169-anklft-bk">
+                            Killer Men's Ankle Fit Black Jeans
+                        </a>
+                    </h4>
+                </div>
+                <div class="im10">
+                    <img src="https://cdn.staticans.com/image/tr:e-sharpen-01,h-800,w-800,cm-pad_resize/data/Killer/29-mar-2023/AK-2162-ANKLFT-DKINDG_2.jpg" alt="noimg" style="width: 100%; height: 85%;">
+                    <h4>
+                        <a href="https://www.killerjeans.com/killer-new-arrivals/killer-new-arrivals-jeans/killer-dark-indigo-ankle-fit-solid-jeans-for-mens-ak-2162-anklft-dkindg">
+                            Killer Dark Indigo Ankle Fit Solid Jeans For Men's
+                        </a>
+                    </h4>
+                </div>
+                <div class="im11">
+                    <img src="https://cdn.staticans.com/image/tr:e-sharpen-01,h-800,w-800,cm-pad_resize/data/Killer/28-feb-2023/AK-2165-ANKLFT-DKINDG_2.jpg" alt="noimg" style="width: 100%; height: 85%;">
+                    <h4>
+                        <a href="https://www.killerjeans.com/killer-new-arrivals/killer-new-arrivals-jeans/killer-men-s-dark-indigo-ankle-fit-jeans-ak-2165-anklft-dkindg">
+                            Killer Men's Dark Indigo Ankle Fit Jeans
+                        </a>
+                    </h4>
+                </div>
+                <div class="im12">
+                    <img src="https://cdn.staticans.com/image/tr:e-sharpen-01,h-800,w-800,cm-pad_resize/data/Killer/02-march-2023/AK-2161-ANKLFT-DKINDG_2.jpg" alt="noimg" style="width: 100%; height: 85%;">
+                    <h4>
+                        <a href="https://www.killerjeans.com/killer-new-arrivals/killer-new-arrivals-jeans/killer-men-s-ankle-fit-dark-indigo-jeans-ak-2161-anklft-dkindg">
+                            Killer Men's Ankle Fit Dark Indigo Jeans
+                        </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bottom">
+        <div class="hd">
+            <h1>Sign up now & get 10% off</h1>
+            <p>Be the first to know about our new arrivals and exclusive offers</p>
+            <div><input type="email" value="Email" class="email"></div>
+            <button class=" button scrb">Subscribe</button>
+        </div>
+        <hr/>
+        <div class="flex">
+            <div class="fl1">
+                <div><b>Information</b></div>
+                <div>Home</div>
+                <div>About</div>
+                <div>Products</div>
+                <div>Contact</div>
+                <div>Track Order</div>
+            </div>
+            <div class="fl1">
+                <div><b>Extras</b></div>
+                <div>Delivery Information</div>
+                <div>Privacy Policy</div>
+                <div>Terms & Conditons</div>
+                <div>Returns</div>
+            </div>
+            <div class="fl1">
+                <div><b>Shopping</b></div>
+                <div>New Arrivals</div>
+                <div>Bottom Wear</div>
+                <div>Top Wear</div>
+                <div>Denim</div>
+            </div>
+            <div class="fl1">
+                <div><b>Socials</b></div>
+                <a href="https://www.facebook.com/KillerJeans/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/killerjeansofficial/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/killer_jeans?lang=en"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UChx4JZSIuV3pHjbKMJ2a3zg"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <hr/>
+        <div class="ftr">All Rights Powered By <strong>ANS Commerce</strong></div>
+    </footer> 
+</body>
+</html>
